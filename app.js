@@ -1,6 +1,6 @@
 // Fill in with your values
-const POST_ENDPOINT = 'https://seccamp2020b3-98.azurewebsites.net/api/post'
-const TIMELINE_ENDPOINT = 'https://seccamp2020b3-98.azurewebsites.net/api/timeline'
+const POST_ENDPOINT = ''
+const TIMELINE_ENDPOINT = 'https://seccamp2020b3-27.azurewebsites.net/api/timeline'
 
 function updateUI() {
   const isLoggedIn = localStorage.getItem('id_token');
@@ -67,7 +67,7 @@ document.getElementById('btn-timeline').addEventListener('click', (e) => {
     headers: {
       'Content-Type': 'application/json',
     },
-    body: email ? JSON.stringify({id: email}) : "",
+    body: email ? JSON.stringify({ id: email }) : "",
   })
     .then(response => response.json())
     .then((data) => {
@@ -75,7 +75,7 @@ document.getElementById('btn-timeline').addEventListener('click', (e) => {
       const base = document.getElementById('messages')
       base.innerHTML = '';
 
-      const template  = document.getElementById('msgtmpl');
+      const template = document.getElementById('msgtmpl');
       data.msgs.forEach((msg) => {
         const msgrow = template.cloneNode(true);
         msgrow.id = null;
