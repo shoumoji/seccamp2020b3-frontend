@@ -1,5 +1,5 @@
 // Fill in with your values
-const POST_ENDPOINT = ''
+const POST_ENDPOINT = 'https://seccamp2020b3-27.azurewebsites.net/api/post'
 const TIMELINE_ENDPOINT = 'https://seccamp2020b3-27.azurewebsites.net/api/timeline'
 
 function updateUI() {
